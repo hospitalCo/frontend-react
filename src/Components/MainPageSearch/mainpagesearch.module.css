@@ -1,0 +1,34 @@
+.imageContainer {
+  width: auto;
+}
+
+.backgroundImage {
+  background-size : cover;
+  width: -webkit-fill-available;
+}
+
+.overLayText {
+  position: absolute;
+  top: 8%;
+  text-align: -webkit-center;
+  width: 100%;
+}
+
+.forhospitals {
+  font-size: 3vw;
+  padding: 50px 20px 6px 20px;
+}
+
+.underline {
+  height: 2px;
+  background-color: #d83f3f;
+  margin: 0px 0px 20px 0px;
+  width: 25%;
+}
+
+.caption {
+  font-size: 18px;
+  padding-bottom: 1%;
+  width: 60%;
+}
+

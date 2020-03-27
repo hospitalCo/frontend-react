@@ -1,0 +1,15 @@
+.headerContainer {
+  background: #c8e4e4;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 15px 15px 0px;
+}
+
+.headerItem {
+  text-decoration: none;
+  color: #4e4b4b;
+  padding-right: 90px;
+}

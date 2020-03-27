@@ -1,0 +1,47 @@
+.cardBody {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 1%;
+  margin-bottom: 2%;
+}
+
+.details {
+  width: 60%;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2%;
+}
+
+.root {
+  width: 35%;
+  display: block;
+  text-align: inherit;
+}
+
+.boldText {
+  font-weight: 800;
+}
+
+.supplierDetails {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  background-color: #f7f5f3;
+}
+
+.subText {
+  font-size: 1vw;
+  margin-top: 1.7%;
+}
+
+.buttonContainer {
+  margin-top: 25%
+}
+
+.supplierButton {
+  margin-top: 10%;
+}
