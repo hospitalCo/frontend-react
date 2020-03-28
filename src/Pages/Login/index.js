@@ -24,10 +24,14 @@ const useStyles = makeStyles(theme => ({
 
 const Login = () => {
   const classes = useStyles();
-  const [loginAs, setLoginAs] = useState('hospital');
+  const [loginFormValues, setLoginFormValues] = useState({
+    loginAs: 'hospital',
+    username: '',
+    password: '',
+  });
 
-  const handleChange = event => {
-    setLoginAs(event.target.value);
+  const handleChange = prop => event => {
+    setLoginFormValues({ ...loginFormValues, [prop]: event.target.value });
   };
 
   return (
@@ -41,8 +45,8 @@ const Login = () => {
                 <Select
                   labelId="demo-simple-select-outlined-label"
                   id="demo-simple-select-outlined"
-                  value={loginAs}
-                  onChange={handleChange}
+                  value={loginFormValues.loginAs}
+                  onChange={handleChange('loginAs')}
                   label="Age"
                 >
                   <MenuItem value={'hospital'}>Hospital</MenuItem>
@@ -50,12 +54,16 @@ const Login = () => {
                 </Select>
               </FormControl>
               <TextField
+                value={loginFormValues.username}
+                onChange={handleChange('username')}
                 className={classes.inputBox}
                 fullWidth
                 id="outlined-basic"
                 label="Username" 
                 variant="outlined" />
-              <TextField 
+              <TextField
+                value={loginFormValues.password}
+                onChange={handleChange('password')}
                 className={classes.inputBox}
                 fullWidth
                 id="outlined-basic"
@@ -64,7 +72,7 @@ const Login = () => {
                 variant="outlined" />
               
               <Button variant="contained" color="primary">
-                Login as {loginAs}
+                Login as {loginFormValues.loginAs}
               </Button>
             </form>
         </CardContent>
