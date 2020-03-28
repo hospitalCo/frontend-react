@@ -12,6 +12,10 @@ const request = (method, url, data) => {
   const requestConfig = {
     method,
     url,
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': '*/*'
+    }
   };
   if (method === 'get') {
     return instance.request({ ...requestConfig, params: data });

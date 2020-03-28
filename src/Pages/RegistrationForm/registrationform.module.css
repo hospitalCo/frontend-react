@@ -6,3 +6,9 @@
 .formContainer {
   max-width: 40%;
 }
+
+.errorMessage {
+  padding: 1%;
+  color: red;
+  text-align: left;
+}
