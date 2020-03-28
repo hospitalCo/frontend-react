@@ -1,28 +1,30 @@
 import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
-  Link
+  useHistory,
 } from "react-router-dom";
 import styles from './header.module.css';
+import Button from '@material-ui/core/Button';
 
 const Header = () => {
+  const history = useHistory();
   return (
     <div className={styles.headerContainer}>
       <Router>
         <div>
           <nav className={styles.headerContent}>
-              <div>
-                <Link className={styles.headerItem} to="/">Home</Link>
+              <div className={styles.headerItem}>
+                <Button onClick={() => history.push('/')}>HOME</Button>
               </div>
-              <div>
-                <Link className={styles.headerItem} to="/register">Register</Link>
+              <div className={styles.headerItem}>
+                <Button onClick={() => history.push('/register')}>REGISTER</Button>
               </div>
-              <div>
-                <Link className={styles.headerItem} to="/login">Login</Link>
+              <div className={styles.headerItem}>
+                <Button onClick={() => history.push('/login')}>LOGIN</Button>
               </div>
-              <div>
-                <Link className={styles.headerItem} to="/contact_us">Contact Us</Link>
-              </div>
+              {/* <div className={styles.headerItem}>
+                <Button onClick={() => history.push('/contact_us')}>CONTACT US</Button>
+              </div> */}
           </nav>
         </div>
       </Router>
