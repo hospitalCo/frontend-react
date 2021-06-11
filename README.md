@@ -1,3 +1,5 @@
+# Project is archived
+
 To setup:
 
 In the project directory:
